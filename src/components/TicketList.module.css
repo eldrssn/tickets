@@ -1,0 +1,7 @@
+.tickets_list {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  gap: 30px;
+  margin-bottom: 50px;
+}

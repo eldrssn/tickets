@@ -1,0 +1,110 @@
+.ticket {
+  background-color: var(--white);
+  box-shadow: var(--primary-shadow) 0px 1px 4px;
+  border-radius: 8px;
+  display: flex;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: var(--primary-shadow) 0px 10px 36px 0px;
+  }
+}
+
+.action_box {
+  width: 50%;
+  padding: 25px;
+  border-right: 1px solid rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.airline_logo {
+  width: 150px;
+  margin: auto;
+
+  img {
+    height: auto;
+  }
+}
+
+.button_buy {
+  font-size: 18px;
+  ;
+  color: var(--white);
+  background-color: var(--secondary);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: brightness(125%);
+  }
+}
+
+.info_box {
+  padding: 20px 40px;
+  width: 100%;
+}
+
+.duration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.time {
+  font-size: 34px;
+}
+
+.stops {
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  opacity: 0.7;
+  padding: 10px;
+  font-size: 14px;
+  translate: 0 -25%;
+  font-weight: 500;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    background-image: url('/images/svg/plane.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    bottom: -11px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    color: rgba(0, 0, 0, 0.25);
+    /* padding: 5px; */
+    /* border: 1px solid red; */
+    /* svg {fill: red;} */
+    transform: 50% 0;
+    border: 2px solid var(--white);
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details_arrival {
+  text-align: end;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.date {
+  opacity: 0.7;
+}

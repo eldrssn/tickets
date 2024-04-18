@@ -1,0 +1,68 @@
+.title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_one {
+  display: none;
+  margin-left: auto;
+  background-color: unset;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  margin: 0 -25px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  min-height: 50px;
+
+  &:hover {
+    background-color: var(--primary-transparent);
+
+    .button_one {
+      display: block;
+    }
+  }
+}
+
+.filterCheckbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.filterCheckbox:checked {
+  border-color: var(--primary);
+}
+
+.filterCheckbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--primary);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
